@@ -1,0 +1,201 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg,#004aad,#0296ff);
+}
+
+/* CARD */
+.card{
+  background:#fff;
+  width:360px;
+  padding:36px 32px;
+  border-radius:16px;
+  box-shadow:0 18px 40px rgba(0,0,0,.18);
+  text-align:center;
+  animation: fadeDown .55s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  top:-120px;
+  right:-120px;
+  width:220px;
+  height:220px;
+  background:#ffdf00;
+  border-radius:50%;
+  opacity:.18;
+  transition:.4s;
+}
+
+.card:hover::before{
+  transform:scale(1.2) translate(-10px,10px);
+  opacity:.23;
+}
+
+/* LOGO */
+.card img{
+  height:58px;
+  margin-bottom:16px;
+  transition:.3s;
+}
+.card img:hover{ transform:scale(1.05); }
+
+/* TITLE */
+.card h2{
+  color:#004aad;
+  margin-bottom:18px;
+}
+
+/* INPUT */
+input{
+  width:100%;
+  padding:14px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #ccc;
+  font-size:15px;
+  transition:.3s;
+}
+
+input:focus{
+  border-color:#004aad;
+  box-shadow:0 0 10px rgba(0,74,173,.3);
+  outline:none;
+  transform:translateY(-2px);
+}
+
+/* BUTTON */
+button{
+  width:100%;
+  padding:14px;
+  margin-top:14px;
+  border:none;
+  border-radius:10px;
+  background:#004aad;
+  color:#fff;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  transform:translateY(-3px);
+  background:#003882;
+}
+
+/* MESSAGE */
+.error,.success{
+  font-weight:600;
+  padding:10px;
+  border-radius:8px;
+  margin-bottom:10px;
+}
+.error{ background:#ffe2e2;color:#b90000; }
+.success{ background:#d5ffd5;color:#027a02; }
+
+/* FOOTER NOTE */
+.note{
+  font-size:14px;
+  margin-top:14px;
+  color:#444;
+}
+.note a{
+  color:#004aad;
+  font-weight:bold;
+  text-decoration:none;
+  transition:.3s;
+}
+.note a:hover{
+  color:#001e54;
+  text-decoration:underline;
+}
+
+.container {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box { width: 360px; }
+
+/* ROLE BOX */
+.role-box {
+    width: 280px;
+    padding: 24px;
+    background: #fffdf3;
+    border-left: 5px solid #004aad;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+    transition: 0.3s;
+    text-align:left;
+}
+
+.role-box h3{
+    font-size:18px;
+    margin-bottom:10px;
+    color:#004aad;
+    text-align:center;
+}
+
+.role-item {
+    background:#ffffff;
+    border-radius:10px;
+    padding:12px;
+    margin-top:10px;
+    border:1px solid #e6dfb5;
+    transition:.3s;
+}
+
+.role-item:hover{
+    transform:translateY(-4px);
+    border-color:#004aad;
+    box-shadow:0 6px 15px rgba(0,0,0,0.08);
+}
+
+.role-item h4{
+    margin-bottom:6px;
+    color:#333;
+    font-size:15px;
+}
+
+.role-item p{
+    margin:0;
+    font-size:14px;
+    line-height:1.4;
+}
+
+.role-item small{
+    font-size:12px;
+    color:#777;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 750px){
+    .container{
+        flex-direction:column;
+    }
+}
+
+/* Animation */
+@keyframes fadeDown{
+  from{ opacity:0; transform:translateY(-15px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+@media(max-width:400px){
+  .card{ width:88%;padding:26px; }
+}

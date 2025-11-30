@@ -1,0 +1,253 @@
+/* ===== GLOBAL RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #333;
+}
+
+/* ===== CONTAINER ===== */
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===== SECTION TITLE ===== */
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #004aad;
+}
+
+/* ===== BANNER ===== */
+.banner {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+}
+
+.banner-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.banner-slide img {
+    width: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* ===== PROMO CARDS ===== */
+.promo-cards {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+.promo-card {
+    min-width: 250px;
+    background: #fff;
+    color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.promo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.promo-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* ===== KATEGORI ===== */
+.kategori-list {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+.kategori-item {
+    min-width: 180px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.kategori-item:hover {
+    transform: translateY(-5px);
+}
+
+.kategori-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* ===== PRODUK TERLARIS ===== */
+.produk-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.produk-card {
+    width: 200px;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produk-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.produk-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* ===== TABLE ===== */
+.tabel-data {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.tabel-data thead {
+    background: #004aad;
+    color: #fff;
+}
+
+.tabel-data th, .tabel-data td {
+    padding: 12px 14px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.tabel-data td:nth-child(3) {
+    text-align: left;
+}
+
+.tabel-data tbody tr:nth-child(even) { background-color: #f9f9f9; }
+.tabel-data tbody tr:nth-child(odd) { background-color: #fff; }
+.tabel-data tbody tr:hover { background-color: #eef3ff; }
+
+/* ===== FORM ===== */
+.form-container {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #004aad;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.form-container button { margin-top: 10px; }
+
+/* ===== FOOTER ===== */
+footer {
+    background: #202020;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ===== BUTTONS ===== */
+.btn { padding: 8px 16px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.3s; margin-top: 10px; text-decoration: none; display: inline-block; }
+.btn-add { background: #004aad; color: #fff; }
+.btn-add:hover { background: #00327a; }
+.btn-edit { background: #007bff; color: #fff; }
+.btn-edit:hover { background: #0056b3; }
+.btn-delete { background: #dc3545; color: #fff; }
+.btn-delete:hover { background: #a71d2a; }
+.btn:disabled { background: #aaa; cursor: not-allowed; }
+
+/* ===== SCROLLBAR HIDDEN ===== */
+.promo-cards::-webkit-scrollbar,
+.kategori-list::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 1024px) {
+    .banner { height: 220px; }
+    .produk-card { width: 180px; }
+    .kategori-item { min-width: 150px; }
+    .promo-card { min-width: 200px; }
+}
+
+@media screen and (max-width: 768px) {
+    section { padding: 30px 15px; }
+    .banner { height: 180px; }
+    .produk-card { width: 45%; margin: auto; }
+    .kategori-item { min-width: 140px; }
+    .promo-card { min-width: 180px; }
+}
+
+@media screen and (max-width: 480px) {
+    section { padding: 20px 10px; }
+    .banner { height: 150px; }
+    .produk-card { width: 90%; margin: 0 auto; }
+    .kategori-item { min-width: 120px; }
+    .promo-card { min-width: 160px; }
+}
